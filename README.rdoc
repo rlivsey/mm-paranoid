@@ -9,7 +9,7 @@ Note, this doesn't change finders etc... I leave that as an implementation detai
 Either load it into all models, or individual models:
   
     # add to all models
-    MongoMapper::Document.append_inclusions(MongoMapper::Plugins::Paranoid)
+    MongoMapper::Document.plugin(MongoMapper::Plugins::Paranoid)
 
     # add to a specific model
     plugin MongoMapper::Plugins::Paranoid
