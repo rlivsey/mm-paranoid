@@ -18,7 +18,7 @@ spec = Gem::Specification.new do |s|
 
   # Change these as appropriate
   s.name              = "mm-paranoid"
-  s.version           = "0.1.0"
+  s.version           = "0.2.0"
   s.summary           = "Tiny plugin for MongoMapper to set deleted_at instead of actually deleting the record."
   s.author            = "Richard Livsey"
   s.email             = "richard@livsey.org"
@@ -34,7 +34,7 @@ spec = Gem::Specification.new do |s|
 
   # If you want to depend on other gems, add them here, along with any
   # relevant versions
-  s.add_dependency("mongo_mapper")
+  s.add_dependency("mongo_mapper", ">= 0.9.0")
 
   # If your tests use any gems, include them here
   s.add_development_dependency("rspec")
