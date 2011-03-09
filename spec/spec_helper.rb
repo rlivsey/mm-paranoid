@@ -2,10 +2,9 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 
 require 'rubygems'
-gem 'rspec'
+require 'rspec'
 
 require 'mm-paranoid'
-require 'spec'
 
 MongoMapper.database = 'mm-paranoid-spec'
 
@@ -23,7 +22,7 @@ class NormalItem
   key :title, String
 end
 
-Spec::Runner.configure do |config|
+RSpec.configure do |config|
   config.before(:each) do
     ParanoidItem.delete_all
     NormalItem.delete_all
